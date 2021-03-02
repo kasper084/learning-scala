@@ -10,7 +10,7 @@ object SnakeCase {
   }
 
   def regexPattern(line: String): String  = {
-    val alphabetic = """"([a-z])"""".r // main problem should be in a pattern
+    val alphabetic = """([a-z]+)""".r // checks if string is consisted of lower case letter only
      line match {
        case alphabetic(value) => "true"
        case _ => "false"
